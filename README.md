@@ -133,7 +133,7 @@ php artisan test
 
 ## Entrega esperada
 
-El estudiante debe trabajar sobre su propio fork del repositorio y entregar en Canvas el enlace al repositorio forkeado, junto con una breve descripción del módulo implementado y los commits principales que evidencian su avance.
+trabaje sobre su propio fork del repositorio y  en Canvas el enlace al repositorio forkeado, junto con una breve descripción del módulo implementado y los commits principales que evidencian su avance.
 ---
 
 ## Módulo 26: Roles y Permisos - Joshua Eduardo García Reyes
