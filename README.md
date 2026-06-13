@@ -134,3 +134,40 @@ php artisan test
 ## Entrega esperada
 
 El estudiante debe trabajar sobre su propio fork del repositorio y entregar en Canvas el enlace al repositorio forkeado, junto con una breve descripción del módulo implementado y los commits principales que evidencian su avance.
+---
+
+## Módulo 26: Roles y Permisos - Joshua Eduardo García Reyes
+
+**Estudiante:** Joshua Eduardo García Reyes  
+**Carnet:** 1890-22-5831  
+
+### ¿Qué hice en este módulo?
+
+Implementé el control de acceso por roles usando Spatie Permission que ya venía instalado en el proyecto. Creé los roles base del sistema, un controlador para manejarlos y un middleware que verifica si el usuario tiene permiso para entrar a ciertas rutas.
+
+### Roles del sistema
+
+| Rol | Permisos |
+|---|---|
+| admin | todos los permisos |
+| medico | ver-usuarios |
+| enfermero | ver-usuarios |
+| laboratorio | ver-usuarios |
+
+### Archivos que agregué
+
+- `database/seeders/RolesAndPermissionsSeeder.php`
+- `app/Http/Controllers/Api/V1/RoleController.php`
+- `app/Http/Middleware/CheckRole.php`
+- `routes/api.php` (modificado)
+- `bootstrap/app.php` (modificado)
+
+### Rutas del módulo
+
+| Método | Ruta | Acceso |
+|---|---|---|
+| GET | /api/v1/roles | solo admin |
+| GET | /api/v1/roles/{id} | solo admin |
+| POST | /api/v1/roles | solo admin |
+| POST | /api/v1/roles/asignar | solo admin |
+| GET | /api/v1/usuarios/{id}/roles | usuario autenticado |
